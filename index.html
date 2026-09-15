@@ -21,12 +21,18 @@
 </head>
 <body>
   <button class="music-button" id="music-button" type="button" aria-label="Музыканы қосу" aria-pressed="false" title="Музыканы қосу">
-    <svg class="music-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M9 17.5V5.6l10-2v11.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6"/>
-      <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.6"/>
+    <svg class="music-ring" viewBox="0 0 112 112" aria-hidden="true" focusable="false">
+      <defs><path id="music-ring-path" d="M56 10 A46 46 0 0 1 102 56 A46 46 0 0 1 56 102 A46 46 0 0 1 10 56 A46 46 0 0 1 56 10"/></defs>
+      <text><textPath href="#music-ring-path">Тыңдау үшін басыңыз • Тыңдау үшін басыңыз • </textPath></text>
     </svg>
-    <span class="music-indicator" aria-hidden="true"></span>
+    <span class="music-disc">
+      <svg class="music-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M9 17.5V5.6l10-2v11.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+      <span class="music-indicator" aria-hidden="true"></span>
+    </span>
   </button>
   <audio id="background-music" src="assets/baqyt.mp3" preload="none" loop></audio>
   <span class="visually-hidden" id="music-status" role="status" aria-live="polite"></span>

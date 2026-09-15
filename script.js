@@ -92,7 +92,7 @@ musicButton.addEventListener("click", async () => {
     if (firstPlay) {
       audio.preload = "auto";
       audio.addEventListener("loadedmetadata", () => {
-        if (firstPlay && audio.duration > MUSIC_START_TIME) audio.currentTime = MUSIC_START_TIME;
+        if (audio.duration > MUSIC_START_TIME) audio.currentTime = MUSIC_START_TIME;
       }, { once: true });
       audio.load();
       // Установка позиции и вызов play происходят в том же жесте пользователя.

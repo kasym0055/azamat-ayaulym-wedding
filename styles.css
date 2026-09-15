@@ -34,13 +34,17 @@ h2{margin:18px 0 0;font-family:var(--serif);font-size:clamp(43px,11vw,58px);font
 .hero-bottom{position:absolute;bottom:38px;left:0;right:0;display:flex;align-items:center;flex-direction:column;gap:10px;font-size:9px;letter-spacing:.27em}
 .down-line{height:27px;width:1px;background:rgba(255,255,255,.7)}
 @keyframes hero-appear{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-.music-button{position:fixed;top:max(27px,env(safe-area-inset-top) + 17px);right:max(25px,env(safe-area-inset-right) + 17px);z-index:10;display:grid;place-items:center;width:49px;height:49px;border:1px solid rgba(255,255,255,.84);border-radius:50%;background:rgba(247,242,234,.93);color:var(--ink);box-shadow:0 5px 25px rgba(24,18,14,.15);cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s}
-.music-button:hover{transform:translateY(-2px);background:var(--white);box-shadow:0 8px 27px rgba(24,18,14,.18)}
-.music-button:active{transform:scale(.95)}
+.music-button{position:fixed;top:max(8px,env(safe-area-inset-top) + 4px);right:max(8px,env(safe-area-inset-right) + 4px);z-index:10;display:grid;place-items:center;width:112px;height:112px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--ink);cursor:pointer}
+.music-disc{position:relative;display:grid;place-items:center;width:62px;height:62px;border:1px solid rgba(255,255,255,.84);border-radius:50%;background:rgba(247,242,234,.95);box-shadow:0 5px 25px rgba(24,18,14,.15);transition:transform .25s,background .25s,box-shadow .25s}
+.music-button:hover .music-disc{transform:translateY(-2px);background:var(--white);box-shadow:0 8px 27px rgba(24,18,14,.18)}
+.music-button:active .music-disc{transform:scale(.95)}
+.music-ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:var(--ink);pointer-events:none;transform-origin:center;animation:music-ring-spin 18s linear infinite}
+.music-ring text{font-family:var(--sans);font-size:10px;font-weight:700;letter-spacing:.08em;paint-order:stroke;stroke:rgba(247,242,234,.92);stroke-width:2.2px;stroke-linejoin:round}
 .music-button:focus-visible,.button:focus-visible,input:focus-visible,.radio-card:focus-within{outline:2px solid var(--muted);outline-offset:4px}
 .music-button.is-playing .music-icon{animation:music-sway 2.5s ease-in-out infinite}
-.music-indicator{position:absolute;bottom:8px;right:8px;width:5px;height:5px;border-radius:50%;background:var(--muted);opacity:0}
+.music-indicator{position:absolute;bottom:10px;right:10px;width:5px;height:5px;border-radius:50%;background:var(--muted);opacity:0}
 .music-button.is-playing .music-indicator{opacity:1}
+@keyframes music-ring-spin{to{transform:rotate(360deg)}}
 @keyframes music-sway{50%{transform:rotate(-7deg)}}
 .invitation{background:var(--ivory);padding-top:104px;padding-bottom:96px}
 .invitation h2{margin-top:24px}
@@ -119,5 +123,5 @@ h2{margin:18px 0 0;font-family:var(--serif);font-size:clamp(43px,11vw,58px);font
 body.js-enabled .reveal{opacity:0;transform:translateY(21px);transition:opacity .8s ease,transform .8s ease}
 body.js-enabled .reveal.is-visible{opacity:1;transform:none}
 @media(max-width:360px){.section-pad{padding-left:22px;padding-right:22px}.hero-frame{inset:12px}.hero h1{font-size:66px}.hero-kicker{font-size:9px}.calendar{padding-left:12px;padding-right:12px}.calendar-day{font-size:22px}.location-address{font-size:24px}.event-time{font-size:27px}.event-time strong{font-size:44px}}
-@media(min-width:561px){body{padding:30px 0}.hero{height:min(100svh,900px)}.music-button{right:calc((100vw - 560px)/2 + 25px)}.section-pad{padding-left:48px;padding-right:48px}}
+@media(min-width:561px){body{padding:30px 0}.hero{height:min(100svh,900px)}.music-button{right:calc((100vw - 560px)/2 + 8px)}.section-pad{padding-left:48px;padding-right:48px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}body.js-enabled .reveal{opacity:1;transform:none}}
