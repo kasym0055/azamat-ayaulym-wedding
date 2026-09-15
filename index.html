@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f2ea">
+  <meta name="description" content="Азамат пен Аяулымның үйлену тойына шақыру">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="kk_KZ">
+  <meta property="og:title" content="Азамат &amp; Аяулым | Үйлену тойы">
+  <meta property="og:description" content="Азамат пен Аяулымның үйлену тойына шақыру">
+  <meta property="og:image" content="https://kasym0055.github.io/azamat-ayaulym-wedding/assets/og-image.jpg">
+  <title>Азамат &amp; Аяулым | Үйлену тойы</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/hero-background.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <button class="music-button" id="music-button" type="button" aria-label="Музыканы қосу" aria-pressed="false" title="Музыканы қосу">
+    <svg class="music-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M9 17.5V5.6l10-2v11.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.6"/>
+    </svg>
+    <span class="music-indicator" aria-hidden="true"></span>
+  </button>
+  <audio id="background-music" src="assets/baqyt.mp3" preload="none" loop></audio>
+  <span class="visually-hidden" id="music-status" role="status" aria-live="polite"></span>
+
+  <main class="site-shell">
+    <section class="hero" aria-labelledby="couple-names">
+      <div class="hero-image" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-frame" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">ҮЙЛЕНУ ТОЙЫНА ШАҚЫРУ</p>
+        <h1 id="couple-names"><span>Азамат</span><span class="ampersand">&amp;</span><span>Аяулым</span></h1>
+        <div class="hero-rule" aria-hidden="true"><span></span><span class="hero-diamond"></span><span></span></div>
+        <p class="hero-date">25.10.2026</p>
+      </div>
+      <div class="hero-bottom" aria-hidden="true"><span>ТӨМЕН ҚАРАЙ</span><span class="down-line"></span></div>
+    </section>
+
+    <section class="invitation section-pad reveal" aria-labelledby="invitation-title">
+      <div class="section-ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+      <p class="eyebrow">Азамат &amp; Аяулым</p>
+      <h2 id="invitation-title">Құрметті қонақтар!</h2>
+      <p class="invitation-copy">екі жастың отау тігіп, шаңырақ көтерген үйлену тойына арналған салтанатты дастарханымыздың қонағы болуға шақырамыз!</p>
+      <svg class="leaf-ornament" width="55" height="75" viewBox="0 0 55 75" fill="none" aria-hidden="true"><path d="M27 70C28 46 33 24 45 6M31 52C19 44 11 33 8 20c13 3 21 12 23 32ZM35 39c10-5 16-13 17-24-10 4-16 12-17 24Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </section>
+
+    <section class="calendar-section section-pad reveal" aria-labelledby="calendar-title">
+      <p class="eyebrow">КҮНТІЗБЕ</p>
+      <h2 id="calendar-title">Қазан <em>2026</em></h2>
+      <div class="calendar" role="table" aria-label="Қазан 2026 күнтізбесі">
+        <div class="calendar-weekdays" role="row"><span role="columnheader">ДС</span><span role="columnheader">СС</span><span role="columnheader">СР</span><span role="columnheader">БС</span><span role="columnheader">ЖМ</span><span role="columnheader">СБ</span><span role="columnheader">ЖС</span></div>
+        <div class="calendar-days" id="calendar-days" role="rowgroup"></div>
+      </div>
+      <p class="calendar-date">25 қазан 2026</p>
+    </section>
+
+    <section class="countdown-section section-pad reveal" aria-labelledby="countdown-title">
+      <div class="section-ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+      <h2 id="countdown-title">Тойға дейін</h2>
+      <div class="countdown" role="timer" aria-label="Тойға дейін қалған уақыт">
+        <div class="countdown-days"><strong id="days">00</strong><span>КҮН</span></div>
+        <div class="countdown-rest"><div><strong id="hours">00</strong><span>САҒАТ</span></div><div><strong id="minutes">00</strong><span>МИНУТ</span></div><div><strong id="seconds">00</strong><span>СЕКУНД</span></div></div>
+      </div>
+      <p class="countdown-finished" id="countdown-finished" hidden>Бүгін — қуанышымыздың күні!</p>
+    </section>
+
+    <section class="time-section section-pad reveal" aria-labelledby="time-title">
+      <svg class="section-icon" width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true"><circle cx="21" cy="21" r="17" stroke="currentColor"/><path d="M21 10v11l7 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h2 id="time-title">Басталуы:</h2>
+      <div class="event-time"><span>Беташар</span><strong>18:00</strong></div>
+      <div class="event-divider" aria-hidden="true"></div>
+      <div class="event-time"><span>Той</span><strong>19:00</strong></div>
+    </section>
+
+    <section class="location-section section-pad reveal" aria-labelledby="location-title">
+      <p class="eyebrow">КЕЗДЕСЕТІН ЖЕРІМІЗ</p>
+      <h2 id="location-title">Локация:</h2>
+      <p class="location-address">Шымкент қаласы,<br><strong>«Royal Palace» мейрамханасы</strong><br>Алдиярова, 38/4</p>
+      <div class="restaurant-photo"><img src="assets/restaurant.jpg" alt="Шымкенттегі Royal Palace мейрамханасының ғимараты" width="800" height="453" loading="lazy" decoding="async"></div>
+      <a class="button gis-button" id="gis-link" href="https://2gis.kz/shymkent/geo/70000001026017256/69.619672,42.307668" target="_blank" rel="noopener noreferrer"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 10c0 5.3-8 11-8 11S4 15.3 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg><span>2GIS арқылы ашу</span></a>
+    </section>
+
+    <section class="rsvp-section section-pad reveal" aria-labelledby="rsvp-title">
+      <div class="section-ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+      <h2 id="rsvp-title">Тойға қатысуыңызды<br>растауды сұраймыз!</h2>
+      <form id="rsvp-form" novalidate>
+        <div class="form-field"><label for="guest-name">Аты-жөніңіз</label><input id="guest-name" name="guest_name" type="text" autocomplete="name" placeholder="Аты-жөніңізді жазыңыз" required maxlength="120"></div>
+        <fieldset class="attendance-options"><legend>Тойға келе аласыз ба?</legend>
+          <label class="radio-card"><input type="radio" name="attendance" value="alone"><span class="radio-mark"></span><span>иә, жалғыз барамын</span></label>
+          <label class="radio-card"><input type="radio" name="attendance" value="with_partner"><span class="radio-mark"></span><span>иә, жұбайыммен барамын</span></label>
+          <label class="radio-card"><input type="radio" name="attendance" value="cannot_attend"><span class="radio-mark"></span><span>жоқ, өкінішке орай бара алмаймын</span></label>
+        </fieldset>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        <button class="button submit-button" id="submit-button" type="submit">Жіберу</button>
+      </form>
+      <div class="success-message" id="success-message" hidden><span class="success-heart" aria-hidden="true">♡</span><p>Рақмет! Жауабыңыз қабылданды 🤍</p></div>
+    </section>
+
+    <section class="hosts-section section-pad reveal" aria-labelledby="hosts-title"><p class="eyebrow" id="hosts-title">ТОЙ ИЕЛЕРІ:</p><p class="hosts-names">Баймахамбет <span>-</span> Әмина</p></section>
+    <footer class="final-section section-pad reveal"><div class="section-ornament" aria-hidden="true"><span></span><i></i><span></span></div><p>Қуанышымызға<br>ортақ болыңыз!</p><svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M13 22s-9-5.8-9-12a5 5 0 0 1 9-2.7A5 5 0 0 1 22 10c0 6.2-9 12-9 12Z" stroke="currentColor" stroke-width="1.2"/></svg></footer>
+  </main>
+</body>
+</html>
